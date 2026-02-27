@@ -1,4 +1,5 @@
-import type { Route } from "./+types/home";import { useLoaderData, useSearchParams } from "react-router";
+import type { Route } from "./+types/home";
+import { useLoaderData, useSearchParams } from "react-router";
 import { useState } from "react";
 import { 
   LogoIcon, 
@@ -11,28 +12,7 @@ import {
   ResetIcon, 
   ArrowDownIcon 
 } from "../components/icons";
-interface Province {
-  id: number;
-  name: string;
-}
-
-interface Regency {
-  id: number;
-  name: string;
-  province_id: number;
-}
-
-interface District {
-  id: number;
-  name: string;
-  regency_id: number;
-}
-
-interface RegionData {
-  provinces: Province[];
-  regencies: Regency[];
-  districts: District[];
-}
+import type { RegionData } from "../types";
 
 // fetch data
 export async function clientLoader() {
